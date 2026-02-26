@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF para Excel - Espelho de Ponto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.mjs" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Conversor PDF → Excel (Espelho de Ponto)</h1>
+      <p class="subtitle">
+        Envie o PDF do espelho de ponto e exporte para <strong>.xlsx</strong> com colunas organizadas.
+      </p>
+
+      <section class="card">
+        <label for="pdfInput" class="upload-label">Selecionar PDF</label>
+        <input id="pdfInput" type="file" accept="application/pdf" />
+        <button id="convertBtn" disabled>Converter para Excel</button>
+        <p id="status" class="status">Aguardando arquivo...</p>
+      </section>
+
+      <section class="card">
+        <h2>Pré-visualização (primeiras linhas)</h2>
+        <div class="table-wrap">
+          <table id="previewTable">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
